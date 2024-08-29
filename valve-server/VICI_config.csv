@@ -1,0 +1,8 @@
+# Enter a list of VICI names and serial device addresses separated by a comma.
+#  Ex: 
+#       name1, /dev/serial/by-id/usb1
+
+v1, /dev/serial/by-id/usb-FTDI_Chipi-X_FT5N6OYA-if00-port0
+v2, /dev/serial/by-id/usb-Belkin_USB_PDA_Adapter_0109_320165-if00-port0
+v3, /dev/serial/by-id/usb-FTDI_Chipi-X_FT5N6R5N-if00-port0
+v4, /dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0

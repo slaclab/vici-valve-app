@@ -1,0 +1,14 @@
+[Unit]
+Description=Stopflow GUI
+Wants=network-online.target
+
+[Service]
+ExecStart=path_to_project/valve-frontend/run.sh
+Type=simple
+StandardOutput=append:path_to_project/valve-frontend/logs/service_standardoutput.log
+StandardError=append:path_to_project/valve-frontend/logs/service_standarderror.log
+SyslogIdentifier=stopflow
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=VICI Valve Server 
+Wants=network-online.target
+
+[Service]
+ExecStart=path_to_project/valve-server/run.sh
+Type=simple
+StandardOutput=append:path_to_project/valve-server/logs/service_standardoutput.log
+StandardError=append:path_to_project/valve-server/logs/service_standarderror.log
+SyslogIdentifier=valve-server
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

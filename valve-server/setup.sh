@@ -28,14 +28,14 @@ cd "$PROJECT_DIR" || { echo "Failed to cd to $PROJECT_DIR"; exit 1; }
 python3 -m venv venv
 
 # Activate the virtual environment
-source venv/bin/activate
+#source venv/bin/activate
 
 # Install the required Python packages
 if [ -f "requirements.txt" ]; then
-    pip install -r requirements.txt
+    venv/bin/pip install -r requirements.txt
 else
     echo "requirements.txt not found, skipping pip install."
 fi
 
-# Notify the user that the setup is complete
 echo "Python virtual environment created and dependencies installed."
+echo "Done with setup."

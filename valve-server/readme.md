@@ -23,6 +23,8 @@ Enter device names and serial device path for the VICIs
 3. install dependencies 
     > pip install -r requirements.txt 
 
+4. If you get errors with the pip installs, maybe your PATH doesnt point to your latest python3 version. Might have better luck if you create the venv and pip install manually in a shell.
+
 
 ### C. Start the server via the optional daemon setup: 
     systemctl enable valve-server.service 

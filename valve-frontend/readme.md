@@ -24,6 +24,8 @@ Global 'comms_enabled' can be used to switch off requests to the server, useful 
 3. install dependencies 
     > pip install -r requirements.txt 
 
+4. If you get errors with the pip installs, maybe your PATH doesnt point to your latest python3 version. Might have better luck if you create the venv and pip install manually in a shell.
+
 
 ### B. Run in a terminal session: 
     venv/bin/python stopflow.py 

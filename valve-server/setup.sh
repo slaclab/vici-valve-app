@@ -6,11 +6,17 @@ PROJECT_DIR=$(dirname "$(realpath "$0")")
 SERVICE_FILE="$PROJECT_DIR/valve-server.service"
 RUN_SCRIPT="$PROJECT_DIR/run.sh"
 
-# Replace the hardcoded paths in the .service file
-sed -i '' "s|path_to_project|$PROJECT_DIR|g" "$SERVICE_FILE"
+OS=$(uname)
 
-# Replace the hardcoded paths in the run.sh file
-sed -i '' "s|path_to_project|$PROJECT_DIR|g" "$RUN_SCRIPT"
+if [ "$OS" = "Darwin" ]; then
+    # Replace the hardcoded paths in the .service and run.sh files
+    sed -i '' "s|path_to_project|$PROJECT_DIR|g" "$SERVICE_FILE"
+    sed -i '' "s|path_to_project|$PROJECT_DIR|g" "$RUN_SCRIPT"
+else
+    # Linux - slightly different syntax
+    sed -i "s|path_to_project|$PROJECT_DIR|g" "$SERVICE_FILE"
+    sed -i "s|path_to_project|$PROJECT_DIR|g" "$RUN_SCRIPT"    
+fi
 
 echo "Paths in valve-server.service and run.sh have been updated to $PROJECT_DIR"
 

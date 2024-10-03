@@ -38,4 +38,4 @@ else
 fi
 
 echo "Python virtual environment created and dependencies installed."
-echo "Done with setup."
+echo "Done with setup. Run the server via 'python server.py'"
